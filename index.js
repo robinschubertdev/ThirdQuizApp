@@ -1,21 +1,23 @@
-const bookMarkToggle = document.querySelector('[data-js="bookMark"]');
+const bookMarkToggle = document.querySelector('[data-js="bookmark"]');
+
+const card =document.querySelector('[class="card-list__item"]');
+
+const showAnswerButton =document.querySelector('[class="card__button-answer"]');
+
+const answer =document.querySelector('[data-js="first-answer"]');
+
 
 bookMarkToggle.addEventListener("click", () => {
 bookMarkToggle.classList.toggle("bookmark--active");
 });
 
-const card =document.querySelector('[class="card-list__item"]');
 
-const answerButton =document.querySelector('[class="card__button-answer"]');
-
-const shownAnswer =document.querySelector('[data-js="answerOne"]');
-
-answerButton.addEventListener("click", () => {
-    shownAnswer.classList.toggle("card__answer");
-    if(answerButton.innerHTML ==="Hide answer"){
-        answerButton.innerHTML ="Show answer"
+showAnswerButton.addEventListener("click", () => {
+    answer.classList.toggle("card__answer");
+    if(showAnswerButton.innerHTML ==="Hide answer"){
+        showAnswerButton.innerHTML ="Show answer"
     } else {
-        answerButton.innerHTML ="Hide answer"
+        showAnswerButton.innerHTML ="Hide answer"
     }
 });
 
